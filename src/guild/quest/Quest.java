@@ -1,26 +1,34 @@
 package guild.quest;
 
 public class Quest {
-    private String title;
-    private int difficulty;
-    private int reward;
+	// ==== フィールド ====
+	private String title;
+	private int difficulty;
+	private int reward;
 
-    public Quest(String title, int difficulty, int reward) {
-        this.title = title;
-        this.difficulty = difficulty;
-        this.reward = reward;
-    }
+	// -------- OOP MEMO --------
+	// 【カプセル化】
+	// フィールドのアクセス修飾子をprivateに設定
+	// クエストの難易度や報酬を、直接操作できない
+	// メソッド経由でのみアクセスできる
+	// --------------------------
 
-    public String getTitle() {
-        return title;
-    }
+	// ==== コンストラクタ ====
+	public Quest(String title, int difficulty, int reward) {
+		this.title = title;
+		this.difficulty = difficulty;
+		this.reward = reward;
+	}
 
-    public int getDifficulty() {
-        return difficulty;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public int getReward() {
-        return reward;
-    }
+	public int getDifficulty() {
+		return difficulty;
+	}
+
+	public int getReward() {
+		return reward;
+	}
 }
-

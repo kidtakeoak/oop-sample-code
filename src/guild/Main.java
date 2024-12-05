@@ -12,6 +12,8 @@ import guild.quest.Quest;
 public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		
+		// 冒険者ギルドをインスタンス化
 		Guild guild = new Guild();
 
 		// サンプルデータの追加
@@ -52,6 +54,16 @@ public class Main {
 			System.out.println("デフォルトの勇者が選択されました");
 			player = new Hero(playerName, 1, 100);
 		}
+		
+		// プレイヤーキャラの確認
+		System.out.println("\n以下でゲームを開始します:");
+		System.out.println("名前: "+ player.getName() +", 職業: "+ player.getJob());
+		
+		System.out.println("\nキャラクターの性能を確認します:");
+		System.out.print("通常攻撃: ");
+		player.attack();
+		System.out.print("固有アクション: ");
+		player.specialAction();
 
 		guild.addMember(player);
 
