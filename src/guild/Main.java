@@ -16,7 +16,7 @@ public class Main {
 		// 冒険者ギルドをインスタンス化
 		Guild guild = new Guild();
 
-		// サンプルデータの追加
+		// パーティーメンバーの登録【ポリモーフィズム】
 		guild.addMember(new Hero("見習い勇者", 5, 100));
 		guild.addMember(new Wizard("駆け出し魔法使い", 4, 80));
 		guild.addMember(new Priest("サボり僧侶", 3, 70));
@@ -27,7 +27,7 @@ public class Main {
 		// クエストデータの登録
 		guild.addQuest(new Quest("キノコあつめ", 1, 100));
 		guild.addQuest(new Quest("スライムたいじ", 4, 500));
-		guild.addQuest(new Quest("ドラゴンげきたい", 8, 2000));
+		guild.addQuest(new Quest("ドラゴンげきたい", 20, 4000));
 		guild.addQuest(new Quest("オブジェクト指向をマスター", 999999, 999999));
 
 		// メインメソッド オープニング
@@ -68,7 +68,8 @@ public class Main {
 		guild.addMember(player);
 
 		// クエスト表示
-		System.out.println("\n現在受注できるクエストは、以下です:");
+		System.out.println("\n早速、クエストに挑戦しましょう!!");
+		System.out.println("現在受注できるクエストは、以下です:");
 		int index = 1;
 		for (Quest quest : guild.getQuests()) {
 			System.out.println(index++ + ". " + quest.getTitle() + " (難易度: " + quest.getDifficulty() + ", 報酬: "
